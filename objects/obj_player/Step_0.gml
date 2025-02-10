@@ -22,10 +22,10 @@ show_debug_message(string(move_x));
 /// @DnDAction : YoYo Games.Collisions.If_Object_At
 /// @DnDVersion : 1.1
 /// @DnDHash : 68268AF4
+/// @DnDComment : If on ground
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "2"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "target" ""
 /// @DnDArgument : "object" "obj_floor"
 /// @DnDSaveInfo : "object" "obj_floor"
 var l68268AF4_0 = instance_place(x + 0, y + 2, [obj_floor]);
@@ -50,6 +50,7 @@ if ((l68268AF4_0 > 0))
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 20B97CBF
+		/// @DnDComment : Jump
 		/// @DnDParent : 30BED836
 		/// @DnDArgument : "expr" "-jump_speed"
 		/// @DnDArgument : "var" "move_y"

@@ -40,6 +40,7 @@
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_floor","path":"sprites/spr_floor/spr_floor.yy",},},
     {"id":{"name":"spr_player","path":"sprites/spr_player/spr_player.yy",},},
+    {"id":{"name":"spr_speed","path":"sprites/spr_speed/spr_speed.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

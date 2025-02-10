@@ -29,7 +29,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_speed",
+    "path":"sprites/spr_speed/spr_speed.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
