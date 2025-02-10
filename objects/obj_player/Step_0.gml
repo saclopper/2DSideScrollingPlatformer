@@ -23,12 +23,11 @@ show_debug_message(string(move_x));
 /// @DnDVersion : 1.1
 /// @DnDHash : 68268AF4
 /// @DnDComment : If on ground
-/// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "2"
 /// @DnDArgument : "y_relative" "1"
 /// @DnDArgument : "object" "obj_floor"
 /// @DnDSaveInfo : "object" "obj_floor"
-var l68268AF4_0 = instance_place(x + 0, y + 2, [obj_floor]);
+var l68268AF4_0 = instance_place(0, y + 2, [obj_floor]);
 if ((l68268AF4_0 > 0))
 {
 	/// @DnDAction : YoYo Games.Common.Variable
