@@ -1,5 +1,12 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
+/// @DnDHash : 7EEA30BA
+/// @DnDArgument : "expr" "layer_tilemap_get_id("Tiles")"
+/// @DnDArgument : "var" "collision_tilemap"
+collision_tilemap = layer_tilemap_get_id("Tiles");
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
 /// @DnDHash : 09B6A990
 /// @DnDComment : I would be pressing right$(13_10)-I would be pressing left$(13_10)0 would be no input
 /// @DnDArgument : "expr" "keyboard_check(vk_right)- keyboard_check(vk_left)"
@@ -25,9 +32,8 @@ show_debug_message(string(move_x));
 /// @DnDComment : If on ground
 /// @DnDArgument : "y" "2"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "object" "obj_floor"
-/// @DnDSaveInfo : "object" "obj_floor"
-var l68268AF4_0 = instance_place(0, y + 2, [obj_floor]);
+/// @DnDArgument : "object" "collision_tilemap"
+var l68268AF4_0 = instance_place(0, y + 2, [collision_tilemap]);
 if ((l68268AF4_0 > 0))
 {
 	/// @DnDAction : YoYo Games.Common.Variable
@@ -94,6 +100,5 @@ else
 /// @DnDArgument : "yvel" "move_y"
 /// @DnDArgument : "maxxmove" "walk_speed"
 /// @DnDArgument : "maxymove" "jump_speed"
-/// @DnDArgument : "object" "obj_floor"
-/// @DnDSaveInfo : "object" "obj_floor"
-move_and_collide(move_x, move_y, obj_floor,4,0,0,walk_speed,jump_speed);
+/// @DnDArgument : "object" "collision_tilemap"
+move_and_collide(move_x, move_y, collision_tilemap,4,0,0,walk_speed,jump_speed);

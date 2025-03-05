@@ -41,9 +41,8 @@ if(move_y > 0)
 /// @DnDArgument : "x_relative" "1"
 /// @DnDArgument : "y" "2"
 /// @DnDArgument : "y_relative" "1"
-/// @DnDArgument : "object" "obj_floor"
-/// @DnDSaveInfo : "object" "obj_floor"
-var l023C20A0_0 = instance_place(x + 0, y + 2, [obj_floor]);
+/// @DnDArgument : "object" "collision_tilemap"
+var l023C20A0_0 = instance_place(x + 0, y + 2, [collision_tilemap]);
 if ((l023C20A0_0 > 0))
 {
 	/// @DnDAction : YoYo Games.Common.If_Variable
