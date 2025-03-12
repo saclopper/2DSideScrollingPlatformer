@@ -1,12 +1,5 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
-/// @DnDHash : 7EEA30BA
-/// @DnDArgument : "expr" "layer_tilemap_get_id("Tiles")"
-/// @DnDArgument : "var" "collision_tilemap"
-collision_tilemap = layer_tilemap_get_id("Tiles");
-
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
 /// @DnDHash : 09B6A990
 /// @DnDComment : I would be pressing right$(13_10)-I would be pressing left$(13_10)0 would be no input
 /// @DnDArgument : "expr" "keyboard_check(vk_right)- keyboard_check(vk_left)"

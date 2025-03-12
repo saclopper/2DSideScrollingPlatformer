@@ -64,15 +64,6 @@ if ((l023C20A0_0 > 0))
 		/// @DnDSaveInfo : "spriteind" "spr_enemy1_walk"
 		sprite_index = spr_enemy1_walk;
 		image_index += 0;
-	
-		/// @DnDAction : YoYo Games.Instances.Sprite_Scale
-		/// @DnDVersion : 1
-		/// @DnDHash : 77BF87A9
-		/// @DnDParent : 468B3F1A
-		/// @DnDArgument : "xscale" "-1*abs(image_xscale)"
-		/// @DnDArgument : "yscale" "image_yscale"
-		image_xscale = -1*abs(image_xscale);
-		image_yscale = image_yscale;
 	}
 
 	/// @DnDAction : YoYo Games.Common.If_Variable
@@ -94,15 +85,6 @@ if ((l023C20A0_0 > 0))
 		/// @DnDSaveInfo : "spriteind" "spr_enemy1_walk"
 		sprite_index = spr_enemy1_walk;
 		image_index += 0;
-	
-		/// @DnDAction : YoYo Games.Instances.Sprite_Scale
-		/// @DnDVersion : 1
-		/// @DnDHash : 7248C0F1
-		/// @DnDParent : 6993289D
-		/// @DnDArgument : "xscale" "abs(image_xscale)"
-		/// @DnDArgument : "yscale" "image_yscale"
-		image_xscale = abs(image_xscale);
-		image_yscale = image_yscale;
 	}
 
 	/// @DnDAction : YoYo Games.Common.If_Variable
@@ -123,4 +105,42 @@ if ((l023C20A0_0 > 0))
 		sprite_index = spr_enemy1_idle;
 		image_index += 0;
 	}
+}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 04AE2D34
+/// @DnDComment : going left
+/// @DnDArgument : "var" "move_x"
+/// @DnDArgument : "op" "3"
+/// @DnDArgument : "value" "-1"
+if(move_x <= -1)
+{
+	/// @DnDAction : YoYo Games.Instances.Sprite_Scale
+	/// @DnDVersion : 1
+	/// @DnDHash : 0DF41395
+	/// @DnDParent : 04AE2D34
+	/// @DnDArgument : "xscale" "-1*abs(image_xscale)"
+	/// @DnDArgument : "yscale" "image_yscale"
+	image_xscale = -1*abs(image_xscale);
+	image_yscale = image_yscale;
+}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 5FBE7DD5
+/// @DnDComment : going right
+/// @DnDArgument : "var" "move_x"
+/// @DnDArgument : "op" "4"
+/// @DnDArgument : "value" "1"
+if(move_x >= 1)
+{
+	/// @DnDAction : YoYo Games.Instances.Sprite_Scale
+	/// @DnDVersion : 1
+	/// @DnDHash : 101E3CC7
+	/// @DnDParent : 5FBE7DD5
+	/// @DnDArgument : "xscale" "abs(image_xscale)"
+	/// @DnDArgument : "yscale" "image_yscale"
+	image_xscale = abs(image_xscale);
+	image_yscale = image_yscale;
 }

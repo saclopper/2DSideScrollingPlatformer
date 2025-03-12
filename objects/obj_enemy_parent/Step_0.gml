@@ -1,25 +1,11 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
-/// @DnDHash : 7EEA30BA
-/// @DnDArgument : "expr" "layer_tilemap_get_id("Tiles")"
-/// @DnDArgument : "var" "collision_tilemap"
-collision_tilemap = layer_tilemap_get_id("Tiles");
-
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
 /// @DnDHash : 09B6A990
 /// @DnDComment : I would be pressing right$(13_10)-I would be pressing left$(13_10)0 would be no input
 /// @DnDDisabled : 1
 /// @DnDArgument : "expr" "keyboard_check(vk_right)- keyboard_check(vk_left)"
 /// @DnDArgument : "var" "move_x"
 
-
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 02997360
-/// @DnDArgument : "expr" "move_x*walk_speed"
-/// @DnDArgument : "var" "move_x"
-move_x = move_x*walk_speed;
 
 /// @DnDAction : YoYo Games.Miscellaneous.Debug_Show_Message
 /// @DnDVersion : 1
@@ -53,9 +39,8 @@ if ((l68268AF4_0 > 0))
 	/// @DnDParent : 68268AF4
 	/// @DnDArgument : "x" "x+(25*sign(move_x))"
 	/// @DnDArgument : "y_relative" "1"
-	/// @DnDArgument : "object" "obj_enemy_parent"
-	/// @DnDSaveInfo : "object" "obj_enemy_parent"
-	var l2398DE83_0 = instance_place(x+(25*sign(move_x)), y + 0, [obj_enemy_parent]);
+	/// @DnDArgument : "object" "collision_tilemap"
+	var l2398DE83_0 = instance_place(x+(25*sign(move_x)), y + 0, [collision_tilemap]);
 	if ((l2398DE83_0 > 0))
 	{
 		/// @DnDAction : YoYo Games.Common.Variable
@@ -74,16 +59,24 @@ if ((l68268AF4_0 > 0))
 	/// @DnDComment : is there a gap in$(13_10)the floor?
 	/// @DnDParent : 68268AF4
 	/// @DnDArgument : "x" "x+(30*sign(move_x))"
-	/// @DnDArgument : "y" "+50"
-	/// @DnDArgument : "object" "obj_enemy_parent"
-	/// @DnDSaveInfo : "object" "obj_enemy_parent"
-	var l19A71200_0 = instance_place(x+(30*sign(move_x)), +50, [obj_enemy_parent]);
-	if ((l19A71200_0 > 0))
+	/// @DnDArgument : "y" "y+50"
+	/// @DnDArgument : "object" "collision_tilemap"
+	/// @DnDArgument : "not" "1"
+	var l19A71200_0 = instance_place(x+(30*sign(move_x)), y+50, [collision_tilemap]);
+	if (!(l19A71200_0 > 0))
 	{
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
+		/// @DnDHash : 36BAAC2F
+		/// @DnDParent : 19A71200
+		/// @DnDArgument : "expr" "move_x*-1"
+		/// @DnDArgument : "var" "move_x"
+		move_x = move_x*-1;
+	
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
 		/// @DnDHash : 1C9D1EA8
-		/// @DnDComment : Jump
+		/// @DnDComment : jump
 		/// @DnDParent : 19A71200
 		/// @DnDArgument : "expr" "-jump_speed"
 		/// @DnDArgument : "var" "move_y"
